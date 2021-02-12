@@ -7,6 +7,7 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+*.app/src/main/java/com/estudoparajava/marvelstore/entity/Constants.java
 .DS_Store
 /build
 /captures
