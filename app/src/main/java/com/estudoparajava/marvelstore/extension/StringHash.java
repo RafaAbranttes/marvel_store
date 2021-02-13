@@ -1,6 +1,6 @@
 package com.estudoparajava.marvelstore.extension;
 
-import com.estudoparajava.marvelstore.entity.Constants;
+import com.estudoparajava.marvelstore.entityAPI.Constants;
 
 
 import java.security.MessageDigest;
