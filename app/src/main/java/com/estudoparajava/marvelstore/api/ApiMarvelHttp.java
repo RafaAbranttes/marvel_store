@@ -3,10 +3,14 @@ package com.estudoparajava.marvelstore.api;
 
 import android.util.Log;
 
-import com.estudoparajava.marvelstore.entity.Comic;
+
+import com.estudoparajava.marvelstore.entity.ComicData;
 import com.estudoparajava.marvelstore.entity.Constants;
 import com.estudoparajava.marvelstore.extension.StringHash;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.util.List;
 
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -26,10 +30,10 @@ public class ApiMarvelHttp {
 
     private static final String pwd = String.valueOf(System.currentTimeMillis())+Constants.getPrivateKey()+Constants.getApiKey();
 
-    public static Comic getAllComics (String query, int offset){
+    public static ComicData getAllComics (String query, int offset){
 
         Log.d("RMS", "getAllCharacter - HTTP");
-        Comic comic = null;
+        ComicData comic = null;
         OkHttpClient client = new OkHttpClient();
 
         if(query == null){
@@ -43,7 +47,7 @@ public class ApiMarvelHttp {
                 .addQueryParameter("hash", StringHash.encryptMD5())
                 .addQueryParameter("title", "avengers")
                 //.addQueryParameter("orderBy", "title")
-                .addQueryParameter("limit", String.valueOf(1))
+                .addQueryParameter("limit", String.valueOf(10))
                 .build();
 
 
@@ -53,21 +57,23 @@ public class ApiMarvelHttp {
 
         try {
             response = client.newCall(request).execute();
-//            String json = response.body().string();
-//            System.out.println(response);
-//            System.out.println(json.getClass());
-//            Gson gson = new Gson();
-            //System.out.println(gson.fromJson(json, ));
+            String json = response.body().string();
+            //System.out.println(response);
+            //System.out.println(json);
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            comic = gson.fromJson(json, ComicData.class);
 
-            //gson.fromJson(json, comic.getClass());
-
+            System.out.println(comic.getCode());
 
         }catch (Exception exception){
             if ( comic != null) Log.d("RMS","erro return code ");
             exception.printStackTrace();
         }
 
+
         return comic;
 
     }
+
+
 }

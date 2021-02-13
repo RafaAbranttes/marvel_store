@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        System.out.println(ApiMarvelHttp.getAllComics("",0));
+        ApiMarvelHttp.getAllComics("",0);
 
 
     }
