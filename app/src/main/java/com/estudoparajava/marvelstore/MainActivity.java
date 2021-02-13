@@ -1,10 +1,11 @@
 package com.estudoparajava.marvelstore;
 
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.view.View;
 import android.view.Menu;
 
-import com.estudoparajava.marvelstore.extension.ExtensionString;
+import com.estudoparajava.marvelstore.api.ApiMarvelHttp;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -46,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        System.out.println(ApiMarvelHttp.getAllComics("",0));
+
 
     }
 

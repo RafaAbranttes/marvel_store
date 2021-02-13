@@ -16,7 +16,15 @@ public class Comic {
     private List<String> characters;
     private boolean itsRare;
 
-    public Comic() {
+    public Comic(int id, String title, String description, int pageCoutn, Date date, Image image, List<String> characters, boolean itsRare) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.pageCoutn = pageCoutn;
+        this.date = date;
+        this.image = image;
+        this.characters = characters;
+        this.itsRare = itsRare;
     }
 
     public int getId() {
@@ -82,4 +90,6 @@ public class Comic {
     public void setItsRare(boolean itsRare) {
         this.itsRare = itsRare;
     }
+
+
 }
