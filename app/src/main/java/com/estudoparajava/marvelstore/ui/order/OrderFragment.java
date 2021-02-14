@@ -18,6 +18,7 @@ public class OrderFragment extends Fragment {
 
     private OrderViewModel orderViewModel;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         orderViewModel =
