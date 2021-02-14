@@ -23,5 +23,19 @@
     <string name="cupom">Cupom</string>
     <string name="total">Total</string>
     <string name="finalizar_compra">Finalizar Compra</string>
+    <string name="pedido_01">Pedido #01</string>
+    <string name="_150_00">$150.00</string>
+    <string name="descri_o">Descrição:</string>
+    <string name="avengers_01">Avengers #01</string>
+
+    <string name="thor_01">Thor #01</string>
+    <string name="q_1x">1x</string>
+    <string name="q_4x">4X</string>
+    <string name="data">Data:</string>
+    <string name="d_10_01_2021">10/01/2021</string>
+    <string name="hora">Hora:</string>
+    <string name="d_10_00">10:00</string>
+    <string name="avengers_10">Avengers #10</string>
+
 
 </resources>
