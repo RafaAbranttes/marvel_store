@@ -15,5 +15,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button_cart">actionButtonCart</string>
     <string name="textViewCart">TextViewCart</string>
+    <string name="adicionar_ao_carrinho">Adicionar ao carrinho</string>
+    <string name="comprar_agora">Comprar agora</string>
+    <string name="descricao">Descrição:</string>
+    <string name="personagens">Personagens:</string>
 
 </resources>

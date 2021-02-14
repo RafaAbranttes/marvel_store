@@ -8,15 +8,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.estudoparajava.marvelstore.R;
 import com.estudoparajava.marvelstore.entityAPI.Comic;
-import com.estudoparajava.marvelstore.entityAPI.Images;
 import com.estudoparajava.marvelstore.entityAPI.Prices;
 import com.estudoparajava.marvelstore.entityAPI.Series;
 import com.estudoparajava.marvelstore.entityAPI.Thumbnail;
+import com.estudoparajava.marvelstore.ui.detailComic.DetailComicActivity;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -28,6 +30,8 @@ public class LojaAdapter extends RecyclerView.Adapter<LojaAdapter.MyViewHolder> 
 
     private final List<Comic> comicList;
     private List<Prices> pricesList;
+
+
 
     public LojaAdapter(List<Comic> comicList) {
         this.comicList = comicList;

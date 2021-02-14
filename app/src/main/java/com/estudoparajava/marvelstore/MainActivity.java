@@ -10,6 +10,7 @@ import com.estudoparajava.marvelstore.api.ApiMarvelHttp;
 import com.estudoparajava.marvelstore.entityAPI.Comic;
 import com.estudoparajava.marvelstore.entityAPI.ComicData;
 import com.estudoparajava.marvelstore.entityAPI.ComicDataData;
+import com.estudoparajava.marvelstore.ui.loja.LojaFragment;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.view.menu.MenuView;
@@ -26,6 +27,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +57,14 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
+        String query = "avengers"; // padrão para a aplicação
 
-//        ComicData comicData = new ComicData();
-//        comicData = ApiMarvelHttp.getAllComics("",0);
-//        ComicDataData comicDataData = comicData.getData();
-//
-//        List<Comic> comic = comicDataData.getResults();
-//        System.out.println(comic.get(0).getTitle());
+
+        ComicData comicData = new ComicData();
+        comicData = ApiMarvelHttp.getAllComics(query,0);
+
+        LojaFragment.setComicData(comicData);
+
 
     }
 

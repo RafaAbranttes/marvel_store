@@ -43,7 +43,7 @@ public class ApiMarvelHttp {
                 .addQueryParameter("ts", Constants.getTs())
                 .addQueryParameter("apikey", Constants.getApiKey())
                 .addQueryParameter("hash", StringHash.encryptMD5())
-                .addQueryParameter("title", "thor")
+                .addQueryParameter("title", query)
                 //.addQueryParameter("orderBy", "title")
                 .addQueryParameter("limit", String.valueOf(10))
                 .build();
