@@ -38,6 +38,7 @@ public class Comic {
     public Comic() {
     }
 
+
     public int getId() {
         return id;
     }

@@ -7,7 +7,9 @@ import android.view.Menu;
 import android.view.View;
 
 import com.estudoparajava.marvelstore.api.ApiMarvelHttp;
+import com.estudoparajava.marvelstore.entityAPI.Comic;
 import com.estudoparajava.marvelstore.entityAPI.ComicData;
+import com.estudoparajava.marvelstore.entityAPI.ComicDataData;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.view.menu.MenuView;
@@ -18,6 +20,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,9 +51,12 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
 
 
-        ComicData comicData = new ComicData();
-        comicData = ApiMarvelHttp.getAllComics("",0);
-        System.out.println(comicData.getEtag());
+//        ComicData comicData = new ComicData();
+//        comicData = ApiMarvelHttp.getAllComics("",0);
+//        ComicDataData comicDataData = comicData.getData();
+//
+//        List<Comic> comic = comicDataData.getResults();
+//        System.out.println(comic.get(0).getTitle());
 
     }
 

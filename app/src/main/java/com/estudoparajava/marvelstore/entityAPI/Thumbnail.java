@@ -20,4 +20,9 @@ public class Thumbnail {
     public void setExtension(String extension) {
         this.extension = extension;
     }
+
+    @Override
+    public String toString() {
+        return ""+path+"/portrait_fantastic."+extension;
+    }
 }

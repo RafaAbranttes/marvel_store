@@ -2,6 +2,10 @@ package com.estudoparajava.marvelstore.entityAPI;
 
 public class Prices {
 
+    public Prices(float price) {
+        this.price = price;
+    }
+
     private String type;
     private float price;
 
@@ -19,5 +23,12 @@ public class Prices {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "$" +
+                price
+                ;
     }
 }

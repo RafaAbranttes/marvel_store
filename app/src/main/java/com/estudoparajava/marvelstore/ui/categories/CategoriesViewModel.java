@@ -10,7 +10,7 @@ public class CategoriesViewModel extends ViewModel {
 
     public CategoriesViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Categorias");
+        mText.setValue("Categoria Vazia");
     }
 
     public LiveData<String> getText() {
