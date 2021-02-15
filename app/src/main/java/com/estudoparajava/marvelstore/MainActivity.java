@@ -59,10 +59,12 @@ public class MainActivity extends AppCompatActivity {
 
         String query = "avengers"; // padrão para a aplicação
 
-
+        //puxar os dados da api
         ComicData comicData = new ComicData();
+        //por padrao ira pegar os dados de quadrinhos dos avengers até 10
         comicData = ApiMarvelHttp.getAllComics(query,0);
 
+        //para mostrar a lista de quadrainhos na tela
         LojaFragment.setComicData(comicData);
 
 

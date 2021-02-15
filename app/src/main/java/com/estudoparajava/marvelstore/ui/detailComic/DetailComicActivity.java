@@ -27,7 +27,8 @@ public class DetailComicActivity extends AppCompatActivity {
     private TextView textViewPriceDetail;
     private TextView textViewDescricao;
 
-
+    //utilizando para pegar os dados que foram enviados da tela de loja para mostrar
+    //na descrição do quadrinho
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

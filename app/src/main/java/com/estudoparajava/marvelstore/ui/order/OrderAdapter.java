@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.estudoparajava.marvelstore.R;
 
+//utilizado para gerar o recycleView dos pedidos
+
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolderOrder> {
 
     @NonNull

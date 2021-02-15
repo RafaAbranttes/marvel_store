@@ -51,6 +51,7 @@ public class LojaAdapter extends RecyclerView.Adapter<LojaAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+        //retirado os dados da api e mostrando em formato de lista
 
         Comic comiclista = comicList.get(position);
         List<Prices> prices = comiclista.getPrices();

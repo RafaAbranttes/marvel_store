@@ -104,6 +104,8 @@ public class LojaFragment extends Fragment {
                         @Override
                         public void onItemClick(View view, int position) {
 
+                            //retirado os dados do quadrinho que o usuario clicou
+
                             Comic comicToDetail = comic.get(position);
                             List<Prices> prices = comicToDetail.getPrices();
                             Series series = comicToDetail.getSeries();

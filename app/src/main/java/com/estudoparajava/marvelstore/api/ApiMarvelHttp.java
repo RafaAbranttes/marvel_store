@@ -50,9 +50,9 @@ public class ApiMarvelHttp {
 
 
         Request request = new Request.Builder().url(url).build();
-        System.out.println(request);
         Response response = null;
 
+        //utilizando para retornar os dados da api
         try {
             response = client.newCall(request).execute();
             String json = response.body().string();
@@ -61,13 +61,12 @@ public class ApiMarvelHttp {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             comic = gson.fromJson(json, ComicData.class);
 
-            System.out.println(comic.getCode());
+            System.out.println(comic.getCode()); //saber se a conexão foi recebida
 
         }catch (Exception exception){
             if ( comic != null) Log.d("RMS","erro return code ");
             exception.printStackTrace();
         }
-
 
         return comic;
 

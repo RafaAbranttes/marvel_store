@@ -1,5 +1,8 @@
 package com.estudoparajava.marvelstore.entity;
 
+//classe inicialmente gereada para colocar os pedidos
+//depois salvar no celular internamente (nao foi implementado)
+
 public class Order {
 
     private Integer id;

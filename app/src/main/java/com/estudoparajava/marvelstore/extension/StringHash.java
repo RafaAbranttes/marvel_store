@@ -17,7 +17,7 @@ public class StringHash {
 
     private static  final String ts = Constants.getTs();
 
-
+    //codigo para fazer a hash de acordo com a api
     public static String encryptMD5(){
 
         String input = ts + privateKey + publicKey;
